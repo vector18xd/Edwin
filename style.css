@@ -2,3 +2,27 @@
     margin:0;
     padding: 0;
 }
+body{
+    display: flex;
+    flex-direction: column;
+}
+#principal{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+.titulo{
+    display: flex;
+}
+.texto{
+    display: flex;
+    flex-direction: column;
+}
+h3{
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}
