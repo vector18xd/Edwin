@@ -21,7 +21,23 @@ function allLower(){
     insertHtml(word);
 }
 function principleLower(){
-
+    let palabras;
+    word = textArea.value;
+    const pala = word.split(' ');
+    console.log(pala[1]);
+    palabras = pala[1];
+    palabras = palabras.charArt(0).toUpperCase();
+    //if(split.length > 2){
+       // for(var i = 0; i>pala.length; i++){
+            //palabras = pala[i];
+            //word = palabras.charArt(0).toUpperCase();
+            //word = word + " ";
+        //}
+    //}else{
+       // palabras=word.charArt(0).toUpperCase();
+    //}
+    console.log(palabras);
+    insertHtml(palabras);
 }
 function clear(){
     textArea .value="";
