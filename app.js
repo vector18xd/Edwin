@@ -22,22 +22,23 @@ function allLower(){
 }
 function principleLower(){
     let palabras;
+    let mensaje = "";
     word = textArea.value;
     const pala = word.split(' ');
-    console.log(pala[1]);
-    palabras = pala[1];
-    palabras = palabras.charArt(0).toUpperCase();
-    //if(split.length > 2){
-       // for(var i = 0; i>pala.length; i++){
-            //palabras = pala[i];
-            //word = palabras.charArt(0).toUpperCase();
-            //word = word + " ";
-        //}
-    //}else{
-       // palabras=word.charArt(0).toUpperCase();
-    //}
-    console.log(palabras);
-    insertHtml(palabras);
+    if(pala.length > 1){
+        for(let i = 0; i < pala.length; i++){
+            palabras = pala[i];
+            palabras = palabras[0].toUpperCase() + palabras.slice(1);
+            mensaje = mensaje + " " + palabras;
+            console.log(palabras);
+            insertHtml(mensaje);
+        }  
+    }else{
+        mensaje = word[0].toUpperCase()+word.slice(1);
+        insertHtml(mensaje);
+    }
+    
+    
 }
 function clear(){
     textArea .value="";
